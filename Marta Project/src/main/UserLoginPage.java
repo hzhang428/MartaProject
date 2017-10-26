@@ -1,22 +1,27 @@
-/**
- * 
- */
 package main;
 
-import javax.print.attribute.standard.PrinterLocation;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.stage.Stage;
 
-/**
- * @author farza
- *
- */
-public class UserLoginPage {
+@SuppressWarnings("restriction")
+public class UserLoginPage extends Application {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.print("User Login Page!");
-	}
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        primaryStage.setTitle("Login Page");
+        
+        Button button = new Button("Log in!");
+        Label label = new Label("Please log in below");
+        Scene scene = new Scene(button, 400, 200);
+        
+        primaryStage.setScene(scene);
+        
+        primaryStage.show();
+    }
 
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
 }
